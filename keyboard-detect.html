@@ -1,0 +1,24 @@
+<div id="char" style="position:relative;left:30vw">按任意鍵</div>
+<table style="width:80vw;text-aligan:center;border:solid;">
+	<thead>
+		<tr>
+			<th>event.key</th>
+			<th>event.which</th>
+			<th>event.keycode</th>
+			<th>charcode</th>
+			<th>event.code</th>
+			<th>event.which</th>
+		</tr>
+	</thead>
+	<tbody id="res">
+	</tbody>
+<tbody></tbody>
+</table>
+<script>
+	document.addEventListener('keydown',function(){
+		let str = '<tr><td>'+ event.key +'</td><td>'+ event.which +'</td><td>'+ event.keyCode +'</td><td>'+ event.key.charCodeAt(0) +'</td><td>'+ event.code +'</td><td>'+ event.location +'</td></tr>' ;
+		document.getElementById('char').innerHTML = event.key ;
+		document.getElementById('res').innerHTML = str;
+		//event.charCode event.key.charCodeAt(0)
+	})
+</script>
